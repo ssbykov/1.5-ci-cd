@@ -19,8 +19,8 @@ jobs:
 
       - name: Setup requirements.txt
         run: |
-        python -m pip install --upgrade pip
-        pip3 install --no-cache-dir --upgrade -r requirements.txt
+          python -m pip install --upgrade pip
+          pip3 install --no-cache-dir --upgrade -r requirements.txt
 
       - name: Code linting
         run: flake8 stocks_products
