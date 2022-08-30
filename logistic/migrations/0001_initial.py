@@ -66,10 +66,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='stock',
             name='products',
-            field=models.ManyToManyField(
-                related_name='stocks',
-                through='logistic.StockProduct',
-                to='logistic.Product'
-            ),
+            field=models.ManyToManyField(related_name='stocks', through='logistic.StockProduct', to='logistic.Product'),
         ),
     ]
