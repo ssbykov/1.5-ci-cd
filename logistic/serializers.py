@@ -49,4 +49,3 @@ class StockSerializer(serializers.ModelSerializer):
                 defaults={'price': position['price'], 'quantity': position['quantity']}
             )
         return stock
-

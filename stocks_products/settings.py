@@ -85,14 +85,21 @@ WSGI_APPLICATION = 'stocks_products.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': env('DB_ENGINE'),
+#         'NAME': env('DB_NAME'),
+#         'HOST': env('DB_HOST'),
+#         'PORT': env('DB_PORT', cast=int),
+#         'USER': env('DB_USER'),
+#         'PASSWORD': env('DB_PASSWORD')
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': env('DB_ENGINE'),
-        'NAME': env('DB_NAME'),
-        'HOST': env('DB_HOST'),
-        'PORT': env('DB_PORT', cast=int),
-        'USER': env('DB_USER'),
-        'PASSWORD': env('DB_PASSWORD')
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
