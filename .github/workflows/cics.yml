@@ -23,5 +23,6 @@ jobs:
           pip3 install --no-cache-dir --upgrade -r requirements.txt
 
       - name: Code linting
-        run: flake8 stocks_products
-
+        run: |
+          flake8 stocks_products
+          flake8 logistic
